@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420" font-family="'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif">
+  <rect width="600" height="420" fill="#f6f8f3"/>
+
+  <!-- 갑천 -->
+  <path d="M548 0 C 530 70, 560 120, 540 190 S 505 300, 528 360 S 520 410, 512 420" fill="none" stroke="#bcdcf2" stroke-width="22" stroke-linecap="round"/>
+  <text x="572" y="98" font-size="16" fill="#4f88b3" text-anchor="middle">갑천</text>
+
+  <!-- 녹지: 옥녀봉, 호수공원 -->
+  <path d="M250 196 L 400 196 L 400 420 L 300 420 C 280 380, 300 330, 262 300 Z" fill="#e2efd2"/>
+  <path d="M432 196 L 520 196 C 505 260, 500 330, 515 420 L 432 420 Z" fill="#e2efd2"/>
+  <ellipse cx="474" cy="300" rx="22" ry="40" fill="#cfe5f5"/>
+
+  <!-- 학교 -->
+  <rect x="196" y="8" width="128" height="100" rx="6" fill="#e3ebf6"/>
+  <path d="M96 250 L 230 250 L 236 420 L 96 420 Z" fill="#e3ebf6"/>
+
+  <!-- 도로 -->
+  <g stroke="#ffffff" stroke-linecap="round" fill="none">
+    <path d="M416 0 V 420" stroke-width="12"/>
+    <path d="M92 0 V 420" stroke-width="8"/>
+    <path d="M239 196 V 330" stroke-width="7"/>
+    <path d="M330 120 V 178" stroke-width="7"/>
+    <path d="M92 120 H 416" stroke-width="7"/>
+    <path d="M0 236 H 416" stroke-width="6"/>
+  </g>
+  <g stroke="#d9dfd2" stroke-width="1" fill="none">
+    <path d="M410 0 V 420 M422 0 V 420"/>
+  </g>
+  <!-- 동서대로 -->
+  <path d="M0 178 H 600" stroke="#ffffff" stroke-width="20"/>
+  <path d="M0 168 H 600 M0 188 H 600" stroke="#d6dccd" stroke-width="1"/>
+  <text x="16" y="184" font-size="16" font-weight="700" fill="#6b7563">동서대로</text>
+
+  <!-- 주변 기준점 -->
+  <g font-size="17" fill="#4f5b47" text-anchor="middle">
+    <text x="260" y="64">대전체육고등학교</text>
+    <text x="163" y="345">목원대학교</text>
+    <text x="320" y="272">한라비발디</text>
+    <text x="320" y="292">아파트</text>
+    <text x="350" y="380" fill="#4d7a2a">옥녀봉</text>
+    <text x="472" y="224" fill="#4d7a2a">옥녀봉</text>
+    <text x="472" y="244" fill="#4d7a2a">체육공원</text>
+    <text x="472" y="372" fill="#4f88b3">갑천생태</text>
+    <text x="472" y="392" fill="#4f88b3">호수공원</text>
+  </g>
+
+  <!-- 교회 위치 -->
+  <rect x="186" y="134" width="56" height="30" rx="4" fill="#cfe3b4" stroke="#36601a" stroke-width="1.5"/>
+  <circle cx="214" cy="149" r="34" fill="#8dc63f" opacity=".18"/>
+  <path d="M214 150 C 214 150, 196 128, 196 114 a18 18 0 0 1 36 0 C 232 128, 214 150, 214 150 Z" fill="#36601a"/>
+  <path d="M214 104 v 16 M207 110 h 14" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <rect x="100" y="196" width="230" height="56" rx="8" fill="#36601a"/>
+  <path d="M206 196 l 8 -8 l 8 8 z" fill="#36601a"/>
+  <text x="215" y="220" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">늘새로운교회</text>
+  <text x="215" y="242" font-size="15" fill="#d6eebc" text-anchor="middle">FM프라임 타워 6층 601호</text>
+
+  <!-- 방위 -->
+  <g transform="translate(572 392)">
+    <circle r="15" fill="#ffffff" stroke="#d6dccd"/>
+    <path d="M0 -10 L 5 4 L 0 1 L -5 4 Z" fill="#36601a"/>
+    <text y="-19" font-size="10" fill="#6b7563" text-anchor="middle">N</text>
+  </g>
+</svg>

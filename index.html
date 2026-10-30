@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>늘새로운교회 | 기독교한국침례회</title>
+  <meta name="description" content="지극히 작은 영혼까지 하나님의 사랑을, 땅 끝까지 그리스도의 복음을! 대전 서구 도안동 늘새로운교회">
+
+  <!-- 카카오톡 등으로 링크를 공유할 때 보이는 미리보기 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="늘새로운교회 | 기독교한국침례회">
+  <meta property="og:description" content="지극히 작은 영혼까지 하나님의 사랑을, 땅 끝까지 그리스도의 복음을!">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="#top">
+      <!-- 로고: assets 폴더에 logo.png 를 올리면 자동으로 나타납니다 -->
+      <img class="brand__logo" src="assets/logo.png" alt="" onerror="this.remove()">
+      <span class="brand__name">늘새로운교회</span>
+    </a>
+    <nav class="nav" aria-label="섹션 이동">
+      <a href="#worship">예배 안내</a>
+      <a href="#videos">예배 영상</a>
+      <a href="#location">오시는 길</a>
+      <a href="#contact">문의</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <h1 class="hero__name">늘새로운교회</h1>
+      <p class="hero__denom">기독교한국침례회</p>
+      <!-- 표어 -->
+      <p class="hero__motto">
+        <span>지극히 작은 영혼까지 하나님의 사랑을,</span>
+        <span>땅 끝까지 그리스도의 복음을!</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- 주제 말씀 -->
+  <section class="verse" aria-label="주제 말씀">
+    <figure class="wrap">
+      <blockquote>그런즉 누구든지 그리스도 안에 있으면 새로운 피조물이라 이전 것은 지나갔으니 보라 새것이 되었도다</blockquote>
+      <figcaption>고린도후서 5:17</figcaption>
+    </figure>
+  </section>
+
+  <section id="worship" class="section">
+    <div class="wrap">
+      <h2>예배 안내</h2>
+      <!-- 예배 시간표: <div class="service">…</div> 하나가 예배 하나입니다 -->
+      <div class="services">
+        <div class="service">
+          <h3 class="service__name">주일 낮 예배</h3>
+          <p class="service__time"><span>주일</span> 오전 11:00</p>
+        </div>
+        <div class="service">
+          <h3 class="service__name">수요 예배</h3>
+          <p class="service__time"><span>수요일</span> 저녁 7:30</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos" class="section section--tint">
+    <div class="wrap">
+      <h2>예배 영상</h2>
+      <p class="lead">예배 실황은 유튜브에서 보실 수 있습니다.</p>
+
+      <div id="video-latest"></div>
+
+      <h3 class="subhead" id="video-archive-title">지난 예배</h3>
+      <!--
+        ▼ 예배 영상 목록 ▼
+        새 영상이 올라오면 맨 위에 한 줄을 추가하세요. 맨 위 영상이 '최근 예배'로 크게 보입니다.
+        형식: <li><a href="유튜브 주소">날짜 예배 이름</a></li>
+      -->
+      <ol id="video-list" class="video-list">
+        <li><a href="https://youtube.com/live/L1Y6FQzbZvU">2026.10.25 주일 낮 예배</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="location" class="section">
+    <div class="wrap">
+      <h2>오시는 길</h2>
+      <address class="address">
+        대전광역시 서구 동서대로 700, 6층 601호<br>
+        <span>(도안동, FM프라임 타워)</span>
+      </address>
+
+      <img class="map" src="assets/map.svg" width="600" height="420"
+           alt="약도: FM프라임 타워는 동서대로 북쪽, 대전체육고등학교 바로 남쪽에 있습니다. 길 건너 남쪽에 목원대학교와 도안동한라비발디아파트가 있습니다.">
+
+      <div class="buttons">
+        <a class="button" href="https://naver.me/5wNrvtkQ" target="_blank" rel="noopener">네이버 지도</a>
+        <a class="button" href="https://kko.to/reEE640Y5m" target="_blank" rel="noopener">카카오맵</a>
+      </div>
+
+      <p class="note"><strong>주차</strong> 건물 지하 1층 주차장을 이용하실 수 있습니다.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section section--tint">
+    <div class="wrap">
+      <h2>문의</h2>
+      <!-- 연락처 -->
+      <ul class="contacts">
+        <li>
+          <span class="contacts__who">교회</span>
+          <a class="contacts__tel" href="tel:042-484-5991">042-484-5991</a>
+        </li>
+        <li>
+          <span class="contacts__who">곽귀일 목사</span>
+          <a class="contacts__tel" href="tel:010-2581-2291">010-2581-2291</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="site-footer__name">늘새로운교회 <span>기독교한국침례회</span></p>
+    <p>대전광역시 서구 동서대로 700, 6층 601호 (도안동, FM프라임 타워)</p>
+  </div>
+</footer>
+
+<script>
+/* 예배 영상 목록에서 맨 위 영상을 '최근 예배'로 크게 보여주고,
+   지난 영상이 많아지면 일부만 보이게 접어 둡니다. 수정할 필요 없습니다. */
+(function () {
+  var SHOW_COUNT = 5; // 처음에 보여줄 지난 예배 개수
+
+  function youtubeId(url) {
+    try {
+      var u = new URL(url);
+      if (u.hostname.indexOf('youtu.be') !== -1) return u.pathname.slice(1);
+      var parts = u.pathname.split('/');
+      if (parts[1] === 'live' || parts[1] === 'shorts' || parts[1] === 'embed') return parts[2];
+      return u.searchParams.get('v');
+    } catch (e) { return null; }
+  }
+
+  var list = document.getElementById('video-list');
+  var latest = document.getElementById('video-latest');
+  var items = Array.prototype.slice.call(list.querySelectorAll('li'));
+  if (!items.length) return;
+
+  var a = items[0].querySelector('a');
+  var id = youtubeId(a.href);
+  var card = document.createElement('a');
+  card.className = 'latest';
+  card.href = a.href;
+  card.target = '_blank';
+  card.rel = 'noopener';
+  card.innerHTML =
+    (id ? '<span class="latest__thumb"><img src="https://i.ytimg.com/vi/' + id + '/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="latest__play" aria-hidden="true"></span></span>' : '') +
+    '<span class="latest__body"><span class="latest__label">최근 예배</span><span class="latest__title"></span><span class="latest__cta">유튜브에서 보기</span></span>';
+  card.querySelector('.latest__title').textContent = a.textContent;
+  latest.appendChild(card);
+  items[0].remove();
+  items.shift();
+
+  items.forEach(function (li) {
+    var link = li.querySelector('a');
+    if (link) { link.target = '_blank'; link.rel = 'noopener'; }
+  });
+
+  if (!items.length) {
+    document.getElementById('video-archive-title').hidden = true;
+    list.hidden = true;
+    return;
+  }
+
+  if (items.length > SHOW_COUNT) {
+    items.slice(SHOW_COUNT).forEach(function (li) { li.hidden = true; });
+    var more = document.createElement('button');
+    more.type = 'button';
+    more.className = 'more';
+    more.textContent = '지난 예배 더 보기';
+    more.addEventListener('click', function () {
+      items.forEach(function (li) { li.hidden = false; });
+      more.remove();
+    });
+    list.after(more);
+  }
+})();
+</script>
+</body>
+</html>

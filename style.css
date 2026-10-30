@@ -1,0 +1,190 @@
+/* ── 색상: 여기만 바꾸면 사이트 전체 색이 바뀝니다 ── */
+:root {
+  --green-deep: #36601a;   /* 글자, 버튼 */
+  --green-leaf: #8dc63f;   /* 포인트 */
+  --green-pale: #f1f8e6;   /* 옅은 배경 */
+  --ink: #1f2a19;          /* 본문 글자 */
+  --ink-soft: #55624c;     /* 보조 글자 */
+  --paper: #ffffff;
+  --line: #dde8cf;
+
+  --sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --serif: "Gowun Batang", "Nanum Myeongjo", "AppleMyungjo", serif;
+  --header-h: 60px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  word-break: keep-all;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--green-deep); }
+:focus-visible { outline: 3px solid var(--green-leaf); outline-offset: 3px; border-radius: 4px; }
+
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 22px; }
+
+/* ── 머리글 ── */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(255, 255, 255, .94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.site-header__inner {
+  max-width: 980px; margin: 0 auto; padding: 0 22px;
+  min-height: var(--header-h);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); flex-shrink: 0; }
+.brand__logo { height: 34px; width: auto; }
+.brand__name { font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; }
+
+.nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a {
+  white-space: nowrap; text-decoration: none; color: var(--ink-soft);
+  font-size: .95rem; padding: 8px 10px; border-radius: 8px;
+}
+.nav a:hover { color: var(--green-deep); background: var(--green-pale); }
+
+@media (max-width: 560px) {
+  .site-header__inner { flex-direction: column; align-items: stretch; gap: 0; padding: 10px 14px 4px; }
+  .brand { padding: 0 8px; }
+  .nav { justify-content: space-between; }
+  .nav a { padding: 8px 8px; font-size: .9rem; }
+  :root { --header-h: 92px; }
+}
+
+/* ── 첫 화면 ── */
+.hero {
+  background: var(--green-pale);
+  padding: clamp(64px, 14vw, 128px) 0 clamp(56px, 11vw, 104px);
+  text-align: center;
+}
+.hero__name {
+  margin: 0;
+  font-size: clamp(2.4rem, 9vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.15;
+  color: var(--green-deep);
+}
+.hero__denom { margin: 10px 0 0; font-size: 1rem; color: var(--ink-soft); letter-spacing: .02em; }
+.hero__motto {
+  margin: clamp(36px, 7vw, 52px) auto 0;
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 4.4vw, 1.6rem);
+  line-height: 1.75;
+  color: var(--ink);
+}
+.hero__motto span { display: block; }
+.hero__motto::before {
+  content: ""; display: block; width: 40px; height: 3px; margin: 0 auto 28px;
+  background: var(--green-leaf); border-radius: 2px;
+}
+
+/* ── 주제 말씀 ── */
+.verse { background: var(--green-deep); color: #fff; padding: clamp(56px, 11vw, 88px) 0; text-align: center; }
+.verse figure { margin: 0 auto; }
+.verse blockquote {
+  margin: 0 auto; max-width: 32em;
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 4.2vw, 1.45rem);
+  line-height: 1.95;
+}
+.verse figcaption { margin-top: 20px; font-size: .95rem; color: #d6eebc; }
+
+/* ── 공통 섹션 ── */
+.section { padding: clamp(56px, 10vw, 88px) 0; }
+.section--tint { background: var(--green-pale); }
+.section h2 { margin: 0 0 24px; font-size: 1.6rem; font-weight: 800; letter-spacing: -.02em; }
+.section h2::after { content: ""; display: block; width: 28px; height: 3px; margin-top: 12px; background: var(--green-leaf); border-radius: 2px; }
+.lead { margin: -8px 0 24px; color: var(--ink-soft); }
+.subhead { margin: 36px 0 8px; font-size: 1.05rem; font-weight: 700; }
+
+/* ── 예배 안내 ── */
+.services { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.service {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+  padding: 20px 0; border-bottom: 1px solid var(--line);
+}
+.service__name { margin: 0; font-size: 1.15rem; font-weight: 700; }
+.service__time { margin: 0; font-size: 1.35rem; font-weight: 700; color: var(--green-deep); font-variant-numeric: tabular-nums; text-align: right; }
+.service__time span { font-size: .95rem; font-weight: 500; color: var(--ink-soft); margin-right: 4px; }
+
+/* ── 예배 영상 ── */
+.latest {
+  display: block; overflow: hidden; text-decoration: none; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+}
+.latest:hover .latest__cta { text-decoration: underline; }
+.latest__thumb { position: relative; display: block; aspect-ratio: 16 / 9; background: #dfe8d4; }
+.latest__thumb img { width: 100%; height: 100%; object-fit: cover; }
+.latest__play {
+  position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px;
+  border-radius: 50%; background: rgba(0, 0, 0, .55);
+}
+.latest__play::after {
+  content: ""; position: absolute; left: 26px; top: 20px;
+  border-style: solid; border-width: 12px 0 12px 20px; border-color: transparent transparent transparent #fff;
+}
+.latest__body { display: block; padding: 18px 20px 20px; }
+.latest__label { display: block; font-size: .9rem; font-weight: 700; color: var(--green-deep); }
+.latest__title { display: block; margin-top: 2px; font-size: 1.2rem; font-weight: 700; }
+.latest__cta { display: block; margin-top: 8px; font-size: .95rem; color: var(--green-deep); }
+
+.video-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.video-list li { border-bottom: 1px solid var(--line); }
+.video-list a { display: block; padding: 14px 2px; text-decoration: none; color: var(--ink); }
+.video-list a:hover { color: var(--green-deep); text-decoration: underline; }
+
+.more {
+  margin-top: 16px; font: inherit; font-size: .95rem; font-weight: 600;
+  color: var(--green-deep); background: none; border: 1px solid var(--green-deep);
+  border-radius: 999px; padding: 9px 20px; cursor: pointer;
+}
+.more:hover { background: var(--paper); }
+
+/* ── 오시는 길 ── */
+.address { font-style: normal; font-size: 1.15rem; font-weight: 600; line-height: 1.6; }
+.address span { font-weight: 400; color: var(--ink-soft); font-size: 1rem; }
+.map { width: 100%; margin: 24px 0 20px; border: 1px solid var(--line); border-radius: 14px; }
+
+.buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.button {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  min-height: 50px; padding: 10px 14px; border-radius: 12px;
+  background: var(--green-deep); color: #fff; text-decoration: none; font-weight: 600; font-size: 1rem;
+}
+.button:hover { background: #2a4d13; }
+@media (max-width: 380px) { .buttons { grid-template-columns: 1fr; } }
+
+.note { margin: 20px 0 0; padding: 14px 16px; background: var(--green-pale); border-radius: 12px; }
+.note strong { color: var(--green-deep); margin-right: 8px; }
+
+/* ── 문의 ── */
+.contacts { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.contacts li {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+  padding: 20px 0; border-bottom: 1px solid var(--line);
+}
+.contacts__who { font-weight: 700; font-size: 1.1rem; }
+.contacts__tel { font-size: 1.3rem; font-weight: 700; text-decoration: none; font-variant-numeric: tabular-nums; }
+.contacts__tel:hover { text-decoration: underline; }
+
+/* ── 바닥글 ── */
+.site-footer { padding: 40px 0 48px; font-size: .9rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
+.site-footer p { margin: 0 0 4px; }
+.site-footer__name { font-weight: 700; color: var(--ink); }
+.site-footer__name span { font-weight: 400; color: var(--ink-soft); margin-left: 6px; }
