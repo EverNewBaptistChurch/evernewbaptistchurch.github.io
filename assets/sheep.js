@@ -4,9 +4,10 @@
    - 휴대폰·태블릿처럼 마우스가 없거나, 화면이 좁아 여백이 부족하면 나타나지 않습니다. */
 (function () {
   var CONTENT_WIDTH = 680; // style.css 의 .wrap 최대 너비
-  var MIN_SCREEN = 900;    // 이보다 좁은 화면에서는 숨김
-  var W = 72, H = 90;      // 양 크기(px)
-  var SPEED = 0.14, OUT_SPEED = 0.36, IN_SPEED = 0.24; // 걷는 속도(px/ms)
+  var MIN_SCREEN = 960;    // 이보다 좁은 화면에서는 숨김
+  var W = 108, H = 135;    // 양 크기(px)
+  var EDGE_GAP = 4;        // 본문 영역 가장자리와 양 사이 간격(px)
+  var SPEED = 0.28, OUT_SPEED = 0.72, IN_SPEED = 0.48; // 걷는 속도(px/ms)
   var SLEEP_AFTER = 7000;  // 이만큼(ms) 가만히 있으면 졸기 시작
 
   var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
@@ -26,11 +27,11 @@
     '.sheep-buddy .head { transform-origin: 50% 90%; transition: transform .3s; }',
     '.sheep-buddy .cheek { transform-origin: center; }',
     '.sheep-buddy .lift { transform-origin: 50% 100%; animation: sheep-breathe 2.6s ease-in-out infinite; }',
-    '.sheep-buddy .walking .lift { animation: sheep-hop .16s ease-in-out infinite alternate; }',
-    '.sheep-buddy .walking .leg-l { animation: sheep-step .32s linear infinite; }',
-    '.sheep-buddy .walking .leg-r { animation: sheep-step .32s linear infinite; animation-delay: -.16s; }',
-    '.sheep-buddy .walking .arm-l { animation: sheep-swing .32s linear infinite; animation-delay: -.16s; }',
-    '.sheep-buddy .walking .arm-r { animation: sheep-swing .32s linear infinite; }',
+    '.sheep-buddy .walking .lift { animation: sheep-hop .12s ease-in-out infinite alternate; }',
+    '.sheep-buddy .walking .leg-l { animation: sheep-step .24s linear infinite; }',
+    '.sheep-buddy .walking .leg-r { animation: sheep-step .24s linear infinite; animation-delay: -.12s; }',
+    '.sheep-buddy .walking .arm-l { animation: sheep-swing .24s linear infinite; animation-delay: -.12s; }',
+    '.sheep-buddy .walking .arm-r { animation: sheep-swing .24s linear infinite; }',
     '.sheep-buddy.right [data-face="smile"] .head { transform: rotate(-7deg); }',
     '.sheep-buddy.left [data-face="smile"] .head { transform: rotate(7deg); }',
     '.sheep-buddy [data-face="smile"] .cheek, .sheep-buddy [data-face="love"] .cheek { transform: scale(1.35); }',
@@ -113,7 +114,7 @@
   function vw() { return document.documentElement.clientWidth; }
   function vh() { return document.documentElement.clientHeight; }
   function gutter() { return (vw() - CONTENT_WIDTH) / 2; }
-  function home(s) { return s === 'left' ? gutter() / 2 - W / 2 : vw() - gutter() / 2 - W / 2; }
+  function home(s) { return s === 'left' ? gutter() - W - EDGE_GAP : vw() - gutter() + EDGE_GAP; }
   function offstage(s) { return s === 'left' ? -W - 10 : vw() + 10; }
   function clampY(v) {
     var top = (header ? header.getBoundingClientRect().bottom : 0) + 8;
